@@ -1,0 +1,50 @@
+
+##Main file to RUN###
+import numpy as np
+import RKphase
+import poincare_section
+import matplotlib.pyplot as plt
+#a = float(raw_input('give me the value of a:'))
+def graph(a):
+    #for Phase plot:
+    #rk = RKphase.driven_pendulum(3.,a,0.55)
+    #for poincare_section:
+    rk = poincare_section.driven_pendulum(3.,a,0.55)
+    rk.RK_4()
+plt.subplot(4,3,1)
+graph(.73)
+plt.title('a = 0.73')
+plt.subplot(4,3,2)
+graph(.736)
+plt.title('a = 0.736')
+plt.subplot(4,3,3)
+graph(.738)
+plt.title('a = 0.738')
+plt.subplot(4,3,4)
+graph(.75)
+plt.title('a = 0.75')
+plt.subplot(4,3,5)
+graph(.78)
+plt.title('a = 0.78')
+plt.subplot(4,3,6)
+graph(.84)
+plt.title('a = 0.84')
+plt.subplot(4,3,7)
+graph(.85)
+plt.title('a = 0.85')
+plt.subplot(4,3,8)
+graph(.855)
+plt.title('a = 0.855')
+plt.subplot(4,3,9)
+graph(.86)
+plt.title('a = 0.86')
+plt.subplot(4,3,10)
+graph(.87)
+plt.title('a = 0.87')
+plt.subplot(4,3,11)
+graph(1.0)
+plt.title('a = 1.0')
+plt.subplot(4,3,12)
+graph(1.2)
+plt.title('a = 1.2')
+plt.show()
