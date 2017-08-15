@@ -1,4 +1,4 @@
-'''@SL'''
+'''@SL Nov 28 2015'''
 import numpy as np
 import sympy as s
 import matplotlib.pyplot as plt
