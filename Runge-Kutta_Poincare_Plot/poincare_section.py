@@ -32,7 +32,7 @@ class driven_pendulum:
 	    tfiless.append(tfiles)
 	thetafiless = [tht[0]]
 	omegafiless = [oma[0]]
-#Defining a iterative function that calculates k_0,k_1.....
+#Defining an iterative function that calculates k_0,k_1.....
 
 	def f(t,theta,w):
 		kk = h*w
@@ -44,7 +44,7 @@ class driven_pendulum:
 	#1. d (theta)/d t = w
 	#2. d (w)/d t = -1/q w - sin(theta) + a cos(w_d t)
         
-#loop for succesive calculation of theta and omega:
+#loop for succesive calculations of theta and omega:
 
         for i in range(len(tfiless)):
 	    f(tfiless[i],thetafiless[i],omegafiless[i])
@@ -71,7 +71,7 @@ class driven_pendulum:
       omega = np.array(omega)
       print th[150:]
       print omega[150:]
- #wrapper for theta between -pi to pi.
+ #wrapper for the theta between -pi to pi.
 
       for i in range(len(th)):
 	  while th[i]>np.pi:
